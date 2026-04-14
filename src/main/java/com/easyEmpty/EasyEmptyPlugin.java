@@ -186,7 +186,9 @@ public class EasyEmptyPlugin extends Plugin
 
 	protected boolean atAltar()
 	{
-		WorldPoint playerLoc = client.getLocalPlayer().getWorldLocation();
+		Player player = client.getLocalPlayer();
+		if (player == null) return false;
+		WorldPoint playerLoc = player.getWorldLocation();
 
 		for (int altarRegion : altars) {
 			if (altarRegion == playerLoc.getRegionID()) {
