@@ -201,12 +201,10 @@ public class EasyEmptyPlugin extends Plugin
 	{
 		if (atAltar()) {
 			if (emptyPouches) {
-				log.debug("updatePouches -> emptyPouches");
 				updatePouch("Empty", emptyPouchesShift);
 			}
 		} else {
 			if(fillPouches) {
-				log.debug("updatePouches -> fillPouches");
 				updatePouch("Fill", fillPouchesShift);
 			}
 		}
@@ -279,7 +277,6 @@ public class EasyEmptyPlugin extends Plugin
 
 		MenuEntry entry1 = menuEntries[originalIdx];
 		MenuEntry entry2 = menuEntries[topIdx];
-		log.debug("Swapping " + entry1.getOption() + " and " + entry2.getOption() );
 
 		menuEntries[originalIdx] = entry2;
 		menuEntries[topIdx] = entry1;
