@@ -171,6 +171,7 @@ public class EasyEmptyPlugin extends Plugin
 			if (widget != null && (entryType == MenuAction.CC_OP_LOW_PRIORITY || entryType == MenuAction.CC_OP) &&
 					((bankFill && entryOption.startsWith("Fill") && ArrayUtils.contains(pouches, widget.getItemId())) ||
 							(swapStam && entryOption.matches("Drink|Withdraw-1") && widget.getItemId() == ItemID.STAMINA_POTION1) ||
+							(swapStam && entryOption.matches("Drink|Withdraw-1") && widget.getItemId() == ItemID.EXTENDED_STAMINA_POTION1) ||
 							(swapNeck && entryOption.matches("Wear|Withdraw-1") && widget.getItemId() == ItemID.BINDING_NECKLACE))) {
 				MenuEntry entry = menuEntries[i];
 
